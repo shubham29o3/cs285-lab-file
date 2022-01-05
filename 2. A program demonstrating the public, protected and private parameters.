@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+class parent
+{
+private:
+int property;
+protected:
+char name[30];
+int height;
+char eye_color[10];
+char address[30];
+public:
+void getdata()
+{
+cout << "Enter parent's name: \n";
+cin >> name;
+cout << "Enter address: \n";
+cin >> address;
+cout << "Enter the height of parent(in cm): \n";
+cin >> height;
+cout << "Enter eye color: \n";
+cin >> eye_color;
+cout << "Enter his income: \n";
+cin >> property;
+}
+void putdata()
+{
+cout << "Name: " << name << endl;
+cout << "Address: " << address << endl;
+cout << "Height: " << height << endl;
+cout << "Eye color: " << eye_color << endl;
+cout << "Property: " << property << endl;
+}
+};
+class child : public parent
+{
+public:
+void getdata()
+{
+cout << "Enter child's name: \n";
+cin >> name;
+cout << "Enter the height of child(in cm): \n";
+cin >> height;
+cin >> height;
+}
+void putdata()
+{
+cout << "Name: " << name << endl;
+cout << "Height: " << height << endl;
+}
+};
+int main()
+{
+parent p;
+p.getdata();
+p.putdata();
+child c;
+c.getdata();
+c.putdata();
+}

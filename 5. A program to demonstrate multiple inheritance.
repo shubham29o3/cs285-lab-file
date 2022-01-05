@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+class A
+{
+    int x, y;
+
+public:
+    A()
+    {
+        x = 41;
+        y = 51;
+    }
+    void display_xy()
+    {
+        cout << "x=" << x << endl
+             << "y=" << y << endl;
+    }
+};
+class B
+{
+    int m, n;
+
+public:
+    B()
+    {
+        m = 61;
+        n = 62;
+    }
+    void display_mn()
+    {
+        cout << "m=" << m << endl
+             << "n=" << n << endl;
+    }
+};
+class C : public A, public B
+{
+    int i, j;
+
+public:
+    C()
+    {
+        i = 71;
+        j = 77;
+    }
+    void display_ij()
+    {
+        cout << "i=" << i << endl
+             << "j=" << j << endl;
+    }
+};
+int main()
+{
+    C c;
+    c.display_xy();
+    cout << "Constructor of parent class 1\n";
+    c.display_mn();
+    cout << "Constructor of parent class 2\n";
+    c.display_ij();
+    cout << "Constructor of base class \n";
+    return 0;
+}

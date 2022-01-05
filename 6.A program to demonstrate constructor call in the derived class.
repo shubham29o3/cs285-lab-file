@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+class Parent
+{
+public:
+    Parent()
+    {
+        cout << "This is Inside base class" << endl;
+    }
+};
+class Child : public Parent
+{
+public:
+    Child()
+    {
+        cout << "This is Inside sub class" << endl;
+    }
+};
+int main()
+{
+    Child obj;
+    return 0;
+}
